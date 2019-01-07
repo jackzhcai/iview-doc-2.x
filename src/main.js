@@ -51,11 +51,12 @@ Vue.locale('en-US', mergeEN);
 
 // 路由配置
 const RouterConfig = {
+    mode: 'hash',
     routes: Routers
 };
-if (Env != 'local') {
-    // RouterConfig.mode = 'history';
-}
+// if (Env != 'local') {
+//     RouterConfig.mode = 'history';
+// }
 const router = new VueRouter(RouterConfig);
 
 router.beforeEach((to, from, next) => {
